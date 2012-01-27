@@ -15,12 +15,15 @@
                       starter-kit-lisp
                       starter-kit-js
                       starter-kit-bindings
+                      slime
                       clojure-mode
                       clojure-test-mode
                       magit
+                      magithub
                       paredit
                       js2-mode
                       gist
+                      htmlize
                       markdown-mode
                       yaml-mode
                       tuareg
