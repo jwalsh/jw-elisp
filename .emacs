@@ -18,6 +18,8 @@
                       slime
                       clojure-mode
                       clojure-test-mode
+                      yasnippet
+                      undo-tree
                       magit
                       magithub
                       paredit
@@ -51,14 +53,13 @@
 (add-to-list 'load-path "~/sandbox/ac-slime")
 (require 'ac-slime)
 
-;; Not recommended
+;; Not recommended but I find it useful for exploration
 (menu-bar-mode  t)
 
 ;; (require 'midje-mode)
 
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
-;; (ac-config-default)
+(require 'undo-tree)
+
 
 (defun jw/beginning-of-buffer ()
   "Move to the beginning of the buffer."
@@ -66,9 +67,7 @@
   (push-mark)
   (goto-char (point-min)))
 
-; (require 'auto-complete)
-; (require 'ac-slime)
-;; (add-hook 'slime-mode-hook 'set-up-slime-ac)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
