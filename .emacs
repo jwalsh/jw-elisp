@@ -11,29 +11,46 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit
-                      starter-kit-lisp
-                      starter-kit-js
-                      starter-kit-bindings
-                      slime
-                      clojure-mode
-                      clojure-test-mode
-                      yasnippet
-                      undo-tree
-                      magit
-                      magithub
-                      paredit
-                      ac-slime
-                      durendal
-                      js2-mode
-                      gist
-                      popup
-                      htmlize
-                      markdown-mode
-                      yaml-mode
-                      tuareg
-                      marmalade
-                      scpaste))
+(defvar my-packages
+  '(starter-kit
+    starter-kit-lisp
+    starter-kit-js
+    starter-kit-bindings
+    slime
+    ac-slime
+    clojure-mode
+    durendal
+    clojurescript-mode
+    slime-fuzzy
+    slime-clj
+    anything-el-swank-fuzzy
+    slime-ritz
+    screen-lines
+    org
+    jira
+    json
+    paredit
+    yasnippet
+    flymake
+    anything-complete
+    undo-tree
+    magit
+    magithub
+    coffee-mode
+    flymake-coffee
+    js2-mode
+    flymake-jshint
+    closure-lint-mode
+    bookmark+
+    anything
+    alpha
+    gist
+    popup
+    erc-nick-notify
+    htmlize
+    markdown-mode
+    marmalade
+    scpaste))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
