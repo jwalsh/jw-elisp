@@ -24,6 +24,7 @@
     ac-slime
     clojure-mode
     durendal
+    hippie-expand-slime
     clojurescript-mode
     screen-lines
     org
@@ -55,6 +56,11 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; Clojure
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 
 ;; Custom installations
 
